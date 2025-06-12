@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+header{
+    position: fixed;
+    width: 100%;
+    padding: 50px 70px;
+    z-index: 999;
+}
+header .main_logo{
+    width:45px;
+    height: 45px;
+    cursor: pointer;
+}
+header svg path{
+    fill:#fff;
+}
+.head_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.head_wrapper .toggle{
+    width:35px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.head_wrapper .toggle .bar{
+    width: 100%;
+    height: 8px;
+    background: #fff;
+}
+/** hero section **/
+#hero{
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    background: #191725;
+}
+
+#hero .first_part{
+    background: #191725;
+    height: 100%;
+}
+#hero .first_part .mask-wrapper{
+    display: grid;
+    grid-template-rows: 1fr;
+    background-image: url(../images/gta_6_logo.svg);
+    mask-image: url(../images/gta_6_logo.svg);
+    background-position: center 47%;
+    mask-position: center 47%;
+    mask-repeat: no-repeat;
+    background-size: 3000%;
+    mask-size: 3000%;
+    position: relative;
+    height: 100%;
+    background-origin: content-box;
+    mask-origin: content-box;
+}
+#hero .hero_inner{
+    position: relative;
+    height: 100%;
+}
+#hero .first_part .bg_image{
+    scale:1.2
+}
+#hero .first_part :is(.bg_image, .logo) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+#hero .first_part .logo{
+    margin-top: -76px;
+}
+#hero .first_part .play_button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 80px;
+    aspect-ratio: 1;
+    top: 60%;
+    z-index: 10;
+}
+#hero .first_part .main_logo {
+    background: url(../images/main_logo.png);
+    width: 283px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 131px;
+    left: 50%;
+    transform: translatex(-50%);
+    mask-image: linear-gradient(to bottom, #0000 50% , #000 50%);
+}
+#hero .first_part .bg_image ~ .bg_image{
+    z-index: 10;
+}
+#hero .first_part .scroll_text{
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+#hero .second_part{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+#hero .second_part .logoplacement {
+    width: 259px;
+    height: auto;
+    opacity: 0;
+    margin-bottom: 100px;
+}
+#hero .second_part .heading {
+    font-size: 9.175rem;
+    line-height: 8.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    max-width: 651px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-block: 60px 60px;
+    background-image: radial-gradient(circle at 50% 250vh,#ffd687 0,#fc5243 50vh,#9d2f6a 90vh,rgba(32,31,66,0) 150vh);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.platform_logos{
+    display: flex;
+    gap: 57px;
+    width: 430px;
+}
+.platform_logos svg{
+  width: 100%;
+}
+.platform_logos svg path{
+    fill:#fff
+}
+#section_two{
+    height: 100vh;
+    background: #191725;
+    display: grid;
+    place-content: center;
+}
+#section_two h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/** herop section **/
