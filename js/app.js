@@ -6,11 +6,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
   effects: true, 
   smoothTouch: 0.1,
 });
+
+
+gsap.from('#hero',{opacity:0, scale:1.1,duration:3,ease: "power4.out"})
+
   let tl = gsap.timeline({
     scrollTrigger:{
         trigger:"#hero",
         start: 'top top', 
-		end: '+=3200',
+		end: '+=3500',
         scrub: 1,
         pin:true
     }
@@ -20,12 +24,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scale:0.95,
     duration:0.5
   });
-  tl.to('#hero .first_part .play_button',{
+  tl.to('#hero .first_part .play_button, .scroll_text',{
     opacity:0,
     duration:0.5
   },'<');
   tl.to('#hero .first_part .bg_image',{
-    scale:1
+    scale:1,
+    duration:1.5
 },'<');
   
   tl.to('#hero .first_part .mask-wrapper',{
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     backgroundSize:"15%",
     backgroundPosition:"center 17%",
     duration:2.
-  },"-=0.50");
+  },"-=1.50");
    tl.to('#hero .first_part .bg_image',{
     opacity:0,
     duration:1.5,
@@ -56,8 +61,18 @@ tl.to('#hero .second_part',{
     opacity:0,
     duration:2
   },"-=1.30")
+  
   tl.to(".hero_inner",{
     scale:0.8,
-    duration:2
-  },"-=2.50")
+    duration:4.5
+  },"-=2.50");
+    tl.to('#hero .first_part',{
+    webkitMaskImage:"linear-gradient(to bottom, #000 -100%, #0000 10%)",
+     duration:1.5
+  },"-=2.40");
+  tl.to('#hero .second_part',{
+    webkitMaskImage:"linear-gradient(to bottom, #000 -100%, #0000 20%)",
+     duration:2
+  },"-=2.30");
+  
  });

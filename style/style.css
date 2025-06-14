@@ -52,6 +52,7 @@ header svg path{
 #hero .first_part{
     background: #191725;
     height: 100%;
+    mask-image: linear-gradient(to bottom, #000 100%, #0000 100%);
 }
 #hero .first_part .mask-wrapper{
     display: grid;
@@ -89,17 +90,17 @@ header svg path{
     margin-inline: auto;
     width: 80px;
     aspect-ratio: 1;
-    top: 60%;
+    top: 56%;
     z-index: 10;
 }
 #hero .first_part .main_logo {
     background: url(../images/main_logo.png);
-    width: 283px;
+    width: 15.1%;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 131px;
+    top: 13.5%;
     left: 50%;
     transform: translatex(-50%);
     mask-image: linear-gradient(to bottom, #0000 50% , #000 50%);
@@ -107,12 +108,30 @@ header svg path{
 #hero .first_part .bg_image ~ .bg_image{
     z-index: 10;
 }
+
 #hero .first_part .scroll_text{
     position: absolute;
-    top:80%;
+    top:88%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
+}
+.inn_text{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    font-weight: 500;
+}
+#hero .first_part .scroll_text .mouse{
+    width: 36px;
+    margin: 10px auto 0;
+    display: block;
+    animation: movedown 1s infinite ease alternate;
+}
+@keyframes movedown{
+    to{
+        transform: translateY(9px);
+    }
 }
 #hero .second_part{
     position: absolute;
@@ -126,20 +145,20 @@ header svg path{
     justify-content: center;
     align-items: center;
     z-index: -1;
+    mask-image: linear-gradient(to bottom, #000 100%, #0000 100%);
 }
 #hero .second_part .logoplacement {
-    width: 259px;
+    width: 15.1%;
     height: auto;
     opacity: 0;
-    margin-bottom: 100px;
 }
 #hero .second_part .heading {
-    font-size: 9.175rem;
-    line-height: 8.25rem;
+    font-size: clamp(6.19rem, 8.2rem, 9rem);
+    line-height:  clamp(6.19rem, 8.2rem, 9rem);
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: #fff;
-    max-width: 651px;
+    max-width: 675px;
     text-align: center;
     text-transform: uppercase;
     margin-block: 60px 60px;
