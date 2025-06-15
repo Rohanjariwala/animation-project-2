@@ -13,8 +13,8 @@ let loader = gsap.timeline({
   //   document.body.removeAttribute("style");
   // }
 });
-loader.from('.stright_line',{
-  width:0,
+loader.to('.stright_line',{
+  width:"100%",
   duration:2,
   delay:1,
   ease:"circ.inOut"

@@ -83,7 +83,7 @@ header svg path{
     top: -56px;
 }
 .stright_line{
-    width: 100%;
+    width: 0;
     height: 3px;
     left: 0;
     top: 50%;
