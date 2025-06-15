@@ -5,6 +5,7 @@
 }
 body{
     background: #000;
+    overflow: hidden;
 }
 img{
     width: 100%;
@@ -41,6 +42,56 @@ header svg path{
     height: 8px;
     background: #fff;
 }
+/** loader **/
+.loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   z-index: 99999;
+   overflow: hidden;
+}
+.loader .loading_inner{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+     background: #191725;
+     overflow: hidden;
+}
+.loader .loading_inner + .loading_inner{
+    bottom: 0;
+}
+.loader .loading_inner span {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    bottom: -56px;
+    font-size: 6rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-weight: 600;
+    line-height: 7rem;
+    text-transform: uppercase;
+     background-image: linear-gradient(to right , #ffd687, #fc5243, #9d2f6a,#fff -100vh);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 10;
+}
+.loader .loading_inner + .loading_inner span{
+    bottom: unset;
+    top: -56px;
+}
+.stright_line{
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    background: linear-gradient(to right , #ffd687, #fc5243, #9d2f6a);
+    position: absolute;
+}
+/** loader **/
 /** hero section **/
 #hero{
     height: 100vh;
@@ -48,7 +99,11 @@ header svg path{
     overflow: hidden;
     background: #191725;
 }
-
+.animated_div{
+    height: 100%;
+    /* opacity: 0;
+    transform: scale(1.1); */
+}
 #hero .first_part{
     background: #191725;
     height: 100%;
@@ -177,18 +232,19 @@ header svg path{
 .platform_logos svg path{
     fill:#fff
 }
-#section_two{
-    height: 100vh;
-    background: #191725;
-    display: grid;
-    place-content: center;
-}
-#section_two h2{
+h2 {
+    font-size: 8rem;
     font-family: "Montserrat", sans-serif;
-    font-size: 4rem;
+    font-weight: 700;
     color: #fff;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    background-image: linear-gradient(to right , #ffd687 100vh, #fc5243, #9d2f6a);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mask-image: linear-gradient(to right, #0000 100%, #000 100%);
+    pointer-events: none;
 }
 /** herop section **/
