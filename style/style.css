@@ -10,6 +10,7 @@ body{
 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 header{
     position: fixed;
@@ -248,3 +249,11 @@ h2 {
     pointer-events: none;
 }
 /** herop section **/
+@media(max-width:1600px){
+    #hero .first_part .main_logo {
+   top: 14.3%;
+}
+#hero .second_part .heading{
+    margin-block: 140px 60px;
+}
+}

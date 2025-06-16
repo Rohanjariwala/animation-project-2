@@ -127,7 +127,7 @@ tl.to('#hero .second_part',{
   tl.to('#hero h2',{
      backgroundImage:" linear-gradient(to right , #ffd687 -20vh, #fc5243, #9d2f6a)",
      duration:2
-  },"-=1.8");
+  },"-=1.4");
  });
 
 
